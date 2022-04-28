@@ -1,0 +1,76 @@
+---
+title: "Harpreet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+For US crime Data Visualization. I used three pages, dashboard, map, chart to plot different graphs like line, area, scatter, jitter, map, and bar plot.
+
+## First Page (Dashboard of Crimes concerning states, cites, and years)
+On the first page, I plotted various types of graphs which show that the crime rate almost falls in 2015 in different department names which include cites and states of US.
+
+## Second Page (Dashboard Map of Yearly trend of Crime in each state of US)
+By plotting the map using interactive visualization technique plotly it describes the crime in each state of the US of different year
+
+## Third Page ("Dashboard Bar Plot of Yearly trend of robbery in each state of USA")
+Finally, I plotted the Bar graph of each state of the US to check the robberies every year which also states that in 2015 robberies was highest in  California whereas in 1975 the crime was highest in new york till 2000 then in California it started rising which shows that till 2015 it has highest robbery crime
+
+
+#Data Set Description
+The data has the following variables:
+
+year -> From 1975 to 2015
+department_name -> city and state name
+total_pop -> population of the city
+homs_sum -> a Total number of homicides in the city for each year.
+rape_sum -> Total number of rapes in the city for each year.
+rob_sum -> Total number of robberies in the city for each year.
+agg_ass_sum -> Total number of assaults in the city for each year.
+violent_crime (rollup of all four crime types) -> Total number of violent crimes in the city for each year.
+months_reported -> Total number of reported months for these crimes in each year.
+violent_per_100k -> Number of violent crimes per 100k in the city for each year.
+homs_per_100k -> Number of homicides crimes per 100k in the city each year.
+rape_per_100k -> Number of rapes crimes per 100k in the city each year.
+rob_per_100k -> Number of robberies crimes per 100k in the city each year.
+agg_ass_per_100k -> Aggregated sum of assaults per 100k in the city for each year.
+
+Original dataset characterstics
+> dim(df)
+2829   17
+str(df)
+spec_tbl_df [2,829 x 17] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ ORI             : chr [1:2829] "NM00101" "TX22001" "GAAPD00" "CO00101" ...
+ $ year            : num [1:2829] 1975 1975 1975 1975 1975 ...
+ $ department_name : chr [1:2829] "Albuquerque, N.M." "Arlington, Texas" "Atlanta" "Aurora, Colo." ...
+ $ total_pop       : num [1:2829] 286238 112478 490584 116656 300400 ...
+ $ homs_sum        : num [1:2829] 30 5 185 7 33 259 25 119 63 68 ...
+ $ rape_sum        : num [1:2829] 181 28 443 44 190 463 137 453 192 71 ...
+ $ rob_sum         : num [1:2829] 819 113 3887 171 529 ...
+ $ agg_ass_sum     : num [1:2829] 1353 132 3518 389 463 ...
+ $ violent_crime   : num [1:2829] 2383 278 8033 611 1215 ...
+ $ months_reported : num [1:2829] 12 12 12 12 12 12 12 12 12 12 ...
+ $ violent_per_100k: num [1:2829] 833 247 1637 524 404 ...
+ $ homs_per_100k   : num [1:2829] 10.48 4.45 37.71 6 10.99 ...
+ $ rape_per_100k   : num [1:2829] 63.2 24.9 90.3 37.7 63.2 ...
+ $ rob_per_100k    : num [1:2829] 286 100 792 147 176 ...
+ $ agg_ass_per_100k: num [1:2829] 473 117 717 333 154 ...
+
+
+##FINAL CONCLUSION
+
+
+##Consider what questions might be answerable with this dataset, and consider what visual encodings would be appropriate that take into account this inferred task
+
+While doing visualization using r shiny, I plotted various graphs but I find out Map is the best way to visualize the crime of every state of the US in different years as it is eye-catching and easy to understand. As more the darker color the highest the crime in that state of a particular year.
+
+It is easy to visualize different crime rates related to different types of crimes in states concerning year.
+The best method and interactive visualization technique I found is plotly as moving the cursor on the plot gives the result of crimes in the state concerning years in the US.
+
+I implemented techniques like Slider input for the year to check crime on different years, date range to select the date, numeric input for a month, in addition, to select input to select the department moreover radio buttons to select the crime to analyze the crime of US
+
+The question was which country highest and lowest crime till 2015? So,  that crime rate was changed from 1975 to 2015 for different cities and states, It also shows that crime rate was highest in Califonia state over the year while the  crime rate decreased in the state of Florida
